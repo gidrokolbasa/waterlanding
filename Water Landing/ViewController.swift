@@ -10,24 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    func addWater(doze: Int) {
+        balance += doze
+        label1.text = String(balance)
+    }
+    
     var balance = 0
 
     @IBOutlet weak var label1: UILabel!
     
     @IBAction func b100(sender: AnyObject) {
-        balance += 100
-        label1.text = String(balance)
+        addWater(100)
     }
     
     @IBAction func b200(sender: AnyObject) {
-        balance += 200
-        label1.text = String(balance)
+        addWater(200)
         
     }
     
     @IBAction func b500(sender: AnyObject) {
-        balance += 500
-        label1.text = String(balance)
+        addWater(500)
     }
     
     
